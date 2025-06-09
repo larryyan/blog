@@ -4,13 +4,116 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/blog/hello-world/"/>
-    <url>/blog/hello-world/</url>
+    <title>图书馆管理系统后端项目实战</title>
+    <link href="/blog/library-management-system-backend/"/>
+    <url>/blog/library-management-system-backend/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本项目为图书馆管理系统的后端，基于 Flask 框架开发，提供 RESTful API用于前端与数据库的交互，适用于图书资源、用户和借阅事务的管理。<br />本项目为“数据库课程设计”作业，前端项目见：<ahref="https://github.com/larryyan/library-management-system-frontend">library-management-system-frontend</a>。</p><p><ahref="https://github.com/larryyan/library-management-system-backend">GitHub项目链接</a></p><h2 id="功能特性">功能特性</h2><ul><li>用户认证与授权（基于 JWT）</li><li>图书信息管理（增删改查）</li><li>用户信息管理（增删改查）</li><li>图书借阅与归还</li><li>逾期图书追踪</li><li>数据统计与报表</li></ul><h2 id="技术栈">技术栈</h2><ul><li>Python 3.11+</li><li>Flask</li><li>Flask-SQLAlchemy</li><li>Flask-JWT-Extended</li><li>Flask-CORS</li><li>SQLite</li></ul><h2 id="快速开始">快速开始</h2><h3 id="环境准备">环境准备</h3><ul><li>Python 3.11 及以上</li><li>pip</li></ul><h3 id="安装步骤">安装步骤</h3><h4 id="克隆仓库">1. 克隆仓库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/larryyan/library-management-system-backend.git<br><span class="hljs-built_in">cd</span> library-management-system-backend<br></code></pre></td></tr></table></figure><h4 id="创建虚拟环境并激活">2. 创建虚拟环境并激活</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">python -m venv venv<br><span class="hljs-comment"># Windows</span><br>venv\Scripts\activate<br><span class="hljs-comment"># macOS/Linux</span><br><span class="hljs-built_in">source</span> venv/bin/activate<br></code></pre></td></tr></table></figure><h4 id="安装依赖">3. 安装依赖</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -r requirements.txt<br></code></pre></td></tr></table></figure><h4 id="初始化数据库">4. 初始化数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">flask create<br></code></pre></td></tr></table></figure><h4 id="启动开发服务器">5. 启动开发服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python app.py<br></code></pre></td></tr></table></figure><ul><li>后端服务将运行在 <ahref="http://127.0.0.1:5000">http://127.0.0.1:5000</a></li></ul><h2 id="主要-api-接口">主要 API 接口</h2><ul><li><code>POST   /api/login</code> 用户登录，获取 JWT Token</li><li><code>GET    /api/protected</code> 受保护接口，测试 Token</li><li><code>GET    /api/book_info</code> 获取所有图书详细信息</li><li><code>GET    /api/book_info/&lt;id&gt;</code>获取指定图书详细信息</li><li><code>GET    /api/book/&lt;id&gt;</code> 获取单本图书信息</li><li><code>POST   /api/book</code> 新增图书</li><li><code>PUT    /api/book/&lt;id&gt;</code> 更新图书</li><li><code>DELETE /api/book/&lt;id&gt;</code> 删除图书</li><li><code>GET    /api/reader/&lt;id&gt;</code> 获取用户信息</li><li><code>POST   /api/reader</code> 新增用户</li><li><code>PUT    /api/reader/&lt;id&gt;</code> 更新用户</li><li><code>DELETE /api/reader/&lt;id&gt;</code> 删除用户</li><li><code>POST   /api/borrow</code> 借书</li><li><code>POST   /api/return</code> 还书</li></ul><p>详细请求与响应格式请参考前端或源码。</p><h2 id="数据库结构">数据库结构</h2><ul><li><code>reader</code> 用户信息表</li><li><code>books</code> 图书实例表</li><li><code>book_info</code> 图书详细信息表</li><li><code>borrow</code> 借阅记录表</li></ul><h2 id="许可证">许可证</h2><p>本项目采用 MIT License，详见 LICENSE 文件。</p><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>Flask</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>RESTful</tag>
+      
+      <tag>后端</tag>
+      
+      <tag>课程设计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>图书管理系统-前端部分</title>
+    <link href="/blog/library-management-system-frontend/"/>
+    <url>/blog/library-management-system-frontend/</url>
+    
+    <content type="html"><![CDATA[<p>本项目是一个基于 Vue 3的图书管理系统前端，旨在为图书馆管理、用户借阅、图书检索等功能提供现代化、响应式的Web 界面。适合学习 Vue3、Vite、组件化开发和前后端分离项目实践。</p><p><ahref="https://github.com/larryyan/library-management-system-frontend">GitHub项目链接</a></p><p><a href="http://8.152.211.157/library/">项目demo</a></p><h2 id="项目特性">项目特性</h2><ul><li>用户登录与登出</li><li>图书检索与展示</li><li>图书详情查看</li><li>用户个人信息管理</li><li>管理员后台（图书与用户管理）</li><li>响应式设计，适配多端</li></ul><h2 id="技术栈">技术栈</h2><ul><li>Vue 3</li><li>Vue Router</li><li>Axios</li><li>Vite</li><li>Bootstrap（样式框架）</li></ul><h2 id="快速开始">快速开始</h2><h3 id="环境要求">环境要求</h3><ul><li>Node.js 12 及以上</li><li>npm</li></ul><h3 id="安装与运行">安装与运行</h3><h4 id="克隆仓库">1. 克隆仓库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/larryyan/library-management-system-frontend.git<br><span class="hljs-built_in">cd</span> library-management-system-frontend<br></code></pre></td></tr></table></figure><h4 id="安装依赖">2. 安装依赖</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure><h4 id="启动开发服务器">3. 启动开发服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run dev<br></code></pre></td></tr></table></figure><ul><li>默认访问地址为 <ahref="http://localhost:3001">http://localhost:3001</a></li></ul><h4 id="构建生产包">4. 构建生产包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run build<br></code></pre></td></tr></table></figure><h2 id="目录结构">目录结构</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">├── public/               # 公共资源<br>├── src/                  # 源码目录<br>│   ├── assets/           # 静态资源<br>│   ├── components/       # 公共组件<br>│   ├── router/           # 路由配置<br>│   ├── views/            # 页面视图<br>│   ├── App.vue           # 根组件<br>│   └── main.js           # 入口文件<br>├── package.json          # 项目依赖与脚本<br>├── vite.config.js        # Vite 配置<br>└── ...<br></code></pre></td></tr></table></figure><h2 id="配置说明">配置说明</h2><ul><li>前端 API 地址、超时时间等配置可在 <code>src/config.js</code>中修改。</li><li>开发环境下，<code>/api</code> 请求会被代理到本地后端（详见<code>vite.config.js</code>）。</li><li>前端通过 Axios 与后端 API 通信，接口定义与请求方法可在<code>src/api/</code> 目录下维护。请确保接口格式与后端一致。</li></ul><h2 id="许可证">许可证</h2><p>本项目基于 MIT License 开源，详见 LICENSE 文件。</p><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Vue3</tag>
+      
+      <tag>前端</tag>
+      
+      <tag>图书管理</tag>
+      
+      <tag>Vite</tag>
+      
+      <tag>Bootstrap</tag>
+      
+      <tag>项目实战</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>计算机网络实习-FTP与爬虫项目</title>
+    <link href="/blog/FTP-Homework/"/>
+    <url>/blog/FTP-Homework/</url>
+    
+    <content type="html"><![CDATA[<ul><li><p>本项目为计算机网络实习课程的作业。</p></li><li><p>项目包含以下部分：</p><ul><li>用C语言实现的FTP服务器</li><li>用C语言实现的FTP客户端</li><li>用Python语言实现的基于Web的FTP文件浏览器</li><li>用C语言实现的基于Socket的网页爬虫</li></ul></li><li><p>所有FTP客户端/服务器和爬虫均需在Linux操作系统下运行。</p></li></ul><p><ahref="https://github.com/larryyan/FTP-Homework">GitHub项目链接</a></p><h2 id="准备工作">准备工作</h2><h3 id="编译c语言服务器客户端和爬虫">编译C语言服务器、客户端和爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make<br></code></pre></td></tr></table></figure><h3 id="安装所需python依赖包">安装所需Python依赖包</h3><h4 id="ubuntu-debian">Ubuntu / Debian</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install python-requests<br><span class="hljs-built_in">sudo</span> apt install python-cgi<br></code></pre></td></tr></table></figure><h4 id="arch-linux">Arch Linux</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S python-requests<br><span class="hljs-built_in">sudo</span> pacman -S python-cgi<br></code></pre></td></tr></table></figure><h2 id="运行方法">运行方法</h2><h3 id="ftp服务器">FTP服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br><span class="hljs-built_in">sudo</span> ./ftp_server<br></code></pre></td></tr></table></figure><h3 id="ftp客户端">FTP客户端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br>./ftp_client<br></code></pre></td></tr></table></figure><figure><img src="/img/assets/image-20250528190021652.png"alt="image-20250528190021652" /><figcaption aria-hidden="true">image-20250528190021652</figcaption></figure><h3 id="基于web的ftp浏览器">基于Web的FTP浏览器</h3><p><a href="http://8.152.211.157/ftp/">项目demo</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 ftp_web/ftp_client_web.py<br></code></pre></td></tr></table></figure><figure><img src="/img/assets/image-20250528190106619.png"alt="image-20250528190106619" /><figcaption aria-hidden="true">image-20250528190106619</figcaption></figure><ul><li>使用你的账号和密码登录</li></ul><figure><img src="/img/assets/image-20250528190129700.png"alt="image-20250528190129700" /><figcaption aria-hidden="true">image-20250528190129700</figcaption></figure><h3 id="基于socket的网页爬虫">基于Socket的网页爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> crawler<br>./crawler_https https://example.com<br></code></pre></td></tr></table></figure><figure><img src="/img/assets/image-20250528190143889.png"alt="image-20250528190143889" /><figcaption aria-hidden="true">image-20250528190143889</figcaption></figure><figure><img src="/img/assets/image-20250528190150785.png"alt="image-20250528190150785" /><figcaption aria-hidden="true">image-20250528190150785</figcaption></figure><ul><li>网站及图片已下载到 download/“域名” 文件夹中。</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>计算机网络</tag>
+      
+      <tag>FTP</tag>
+      
+      <tag>C语言</tag>
+      
+      <tag>Python</tag>
+      
+      <tag>实验</tag>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>观测木星与开普勒三定律验证——研究性学习项目</title>
+    <link href="/blog/Jupiter&amp;Kepler&#39;s-laws/"/>
+    <url>/blog/Jupiter&amp;Kepler&#39;s-laws/</url>
+    
+    <content type="html"><![CDATA[<p>本项目由清华大学附属中学学生团队完成，通过观测木星及其卫星，结合数据分析，验证开普勒三定律。适合对天文观测、物理定律验证和Python数据处理感兴趣的同学参考。</p><p><ahref="https://github.com/larryyan/JupiterAnalysis">GitHub项目链接</a></p><h2 id="小组成员">小组成员</h2><p>张诗瑶、张天一、韩天远、严嘉哲、李胤辰</p><h2 id="项目简介">项目简介</h2><p>本研究性学习项目以“观测木星及其卫星运动，利用数据拟合方法验证开普勒三定律”为目标。通过多次观测、数据整理与Python编程分析，直观展示了天体运动规律。</p><h2 id="操作方法">操作方法</h2><ol type="1"><li>运行 <code>main.py</code></li><li>输入木星卫星的观测位置信息</li><li>程序自动生成卫星位置变化图像，并进行数据拟合</li><li>最终输出用于验证开普勒第三定律的分析结果</li></ol><h2 id="开普勒三定律简介">开普勒三定律简介</h2><h3 id="第一条椭圆轨道定律">第一条（椭圆轨道定律）</h3><p>所有行星绕太阳的轨道都是椭圆，太阳位于椭圆的一个焦点上。</p><h3 id="第二条面积定律">第二条（面积定律）</h3><p>行星与太阳的连线在相等时间内扫过的面积相等。</p><h3 id="第三条周期定律">第三条（周期定律）</h3><p>行星绕太阳运动的半长轴 <span class="math inline"><em>a</em></span>的立方与周期 <span class="math inline"><em>T</em></span>的平方成正比，即： <spanclass="math inline">$\frac{a^3}{T^2}=k$</span></p><h2 id="实验原理">实验原理</h2><ul><li>将卫星轨道半长轴近似为半径</li><li>利用 Python 的 <code>scipy.optimize.curve_fit</code>进行数据拟合</li><li>通过拟合结果，选取多组数据进行定律验证</li><li>详细原理见 <ahref="https://github.com/larryyan/JupiterAnalysis/blob/master/ProgramDetail.md">程序原理</a></li><li>使用时只需运行 curve fit 相关程序，leastsq 实现未成功（main.py仅供参考）</li></ul><h2 id="项目进度">项目进度</h2><ul><li>6.7：第一次观测</li><li>6.7：论文初稿完成</li><li>6.22：Python 拟合程序 v1.0 完成</li><li>暑假期间项目基本完成</li></ul><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>天文</tag>
+      
+      <tag>物理</tag>
+      
+      <tag>数据分析</tag>
+      
+      <tag>开普勒定律</tag>
+      
+      <tag>科研实践</tag>
+      
+    </tags>
     
   </entry>
   
