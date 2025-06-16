@@ -37,7 +37,7 @@
     <link href="/blog/library-management-system-frontend/"/>
     <url>/blog/library-management-system-frontend/</url>
     
-    <content type="html"><![CDATA[<p>本项目是一个基于 Vue 3的图书管理系统前端，旨在为图书馆管理、用户借阅、图书检索等功能提供现代化、响应式的Web 界面。适合学习 Vue3、Vite、组件化开发和前后端分离项目实践。</p><p><ahref="https://github.com/larryyan/library-management-system-frontend">GitHub项目链接</a></p><p><a href="http://8.152.211.157/library/">项目demo</a></p><h2 id="项目特性">项目特性</h2><ul><li>用户登录与登出</li><li>图书检索与展示</li><li>图书详情查看</li><li>用户个人信息管理</li><li>管理员后台（图书与用户管理）</li><li>响应式设计，适配多端</li></ul><h2 id="技术栈">技术栈</h2><ul><li>Vue 3</li><li>Vue Router</li><li>Axios</li><li>Vite</li><li>Bootstrap（样式框架）</li></ul><h2 id="快速开始">快速开始</h2><h3 id="环境要求">环境要求</h3><ul><li>Node.js 12 及以上</li><li>npm</li></ul><h3 id="安装与运行">安装与运行</h3><h4 id="克隆仓库">1. 克隆仓库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/larryyan/library-management-system-frontend.git<br><span class="hljs-built_in">cd</span> library-management-system-frontend<br></code></pre></td></tr></table></figure><h4 id="安装依赖">2. 安装依赖</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure><h4 id="启动开发服务器">3. 启动开发服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run dev<br></code></pre></td></tr></table></figure><ul><li>默认访问地址为 <ahref="http://localhost:3001">http://localhost:3001</a></li></ul><h4 id="构建生产包">4. 构建生产包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run build<br></code></pre></td></tr></table></figure><h2 id="目录结构">目录结构</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">├── public/               # 公共资源<br>├── src/                  # 源码目录<br>│   ├── assets/           # 静态资源<br>│   ├── components/       # 公共组件<br>│   ├── router/           # 路由配置<br>│   ├── views/            # 页面视图<br>│   ├── App.vue           # 根组件<br>│   └── main.js           # 入口文件<br>├── package.json          # 项目依赖与脚本<br>├── vite.config.js        # Vite 配置<br>└── ...<br></code></pre></td></tr></table></figure><h2 id="配置说明">配置说明</h2><ul><li>前端 API 地址、超时时间等配置可在 <code>src/config.js</code>中修改。</li><li>开发环境下，<code>/api</code> 请求会被代理到本地后端（详见<code>vite.config.js</code>）。</li><li>前端通过 Axios 与后端 API 通信，接口定义与请求方法可在<code>src/api/</code> 目录下维护。请确保接口格式与后端一致。</li></ul><h2 id="许可证">许可证</h2><p>本项目基于 MIT License 开源，详见 LICENSE 文件。</p><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
+    <content type="html"><![CDATA[<p>本项目是一个基于 Vue 3的图书管理系统前端，旨在为图书馆管理、用户借阅、图书检索等功能提供现代化、响应式的Web 界面。适合学习 Vue3、Vite、组件化开发和前后端分离项目实践。</p><p><ahref="https://github.com/larryyan/library-management-system-frontend">GitHub项目链接</a></p><p><a href="https://www.yanjz.top/library/">项目demo</a></p><h2 id="项目特性">项目特性</h2><ul><li>用户登录与登出</li><li>图书检索与展示</li><li>图书详情查看</li><li>用户个人信息管理</li><li>管理员后台（图书与用户管理）</li><li>响应式设计，适配多端</li></ul><h2 id="技术栈">技术栈</h2><ul><li>Vue 3</li><li>Vue Router</li><li>Axios</li><li>Vite</li><li>Bootstrap（样式框架）</li></ul><h2 id="快速开始">快速开始</h2><h3 id="环境要求">环境要求</h3><ul><li>Node.js 12 及以上</li><li>npm</li></ul><h3 id="安装与运行">安装与运行</h3><h4 id="克隆仓库">1. 克隆仓库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/larryyan/library-management-system-frontend.git<br><span class="hljs-built_in">cd</span> library-management-system-frontend<br></code></pre></td></tr></table></figure><h4 id="安装依赖">2. 安装依赖</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure><h4 id="启动开发服务器">3. 启动开发服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run dev<br></code></pre></td></tr></table></figure><ul><li>默认访问地址为 <ahref="http://localhost:3001">http://localhost:3001</a></li></ul><h4 id="构建生产包">4. 构建生产包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run build<br></code></pre></td></tr></table></figure><h2 id="目录结构">目录结构</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">├── public/               # 公共资源<br>├── src/                  # 源码目录<br>│   ├── assets/           # 静态资源<br>│   ├── components/       # 公共组件<br>│   ├── router/           # 路由配置<br>│   ├── views/            # 页面视图<br>│   ├── App.vue           # 根组件<br>│   └── main.js           # 入口文件<br>├── package.json          # 项目依赖与脚本<br>├── vite.config.js        # Vite 配置<br>└── ...<br></code></pre></td></tr></table></figure><h2 id="配置说明">配置说明</h2><ul><li>前端 API 地址、超时时间等配置可在 <code>src/config.js</code>中修改。</li><li>开发环境下，<code>/api</code> 请求会被代理到本地后端（详见<code>vite.config.js</code>）。</li><li>前端通过 Axios 与后端 API 通信，接口定义与请求方法可在<code>src/api/</code> 目录下维护。请确保接口格式与后端一致。</li></ul><h2 id="许可证">许可证</h2><p>本项目基于 MIT License 开源，详见 LICENSE 文件。</p><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
     
     
     
@@ -66,11 +66,13 @@
     <link href="/blog/FTP-Homework/"/>
     <url>/blog/FTP-Homework/</url>
     
-    <content type="html"><![CDATA[<ul><li><p>本项目为计算机网络实习课程的作业。</p></li><li><p>项目包含以下部分：</p><ul><li>用C语言实现的FTP服务器</li><li>用C语言实现的FTP客户端</li><li>用Python语言实现的基于Web的FTP文件浏览器</li><li>用C语言实现的基于Socket的网页爬虫</li></ul></li><li><p>所有FTP客户端/服务器和爬虫均需在Linux操作系统下运行。</p></li></ul><p><ahref="https://github.com/larryyan/FTP-Homework">GitHub项目链接</a></p><h2 id="准备工作">准备工作</h2><h3 id="编译c语言服务器客户端和爬虫">编译C语言服务器、客户端和爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make<br></code></pre></td></tr></table></figure><h3 id="安装所需python依赖包">安装所需Python依赖包</h3><h4 id="ubuntu-debian">Ubuntu / Debian</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install python-requests<br><span class="hljs-built_in">sudo</span> apt install python-cgi<br></code></pre></td></tr></table></figure><h4 id="arch-linux">Arch Linux</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S python-requests<br><span class="hljs-built_in">sudo</span> pacman -S python-cgi<br></code></pre></td></tr></table></figure><h2 id="运行方法">运行方法</h2><h3 id="ftp服务器">FTP服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br><span class="hljs-built_in">sudo</span> ./ftp_server<br></code></pre></td></tr></table></figure><h3 id="ftp客户端">FTP客户端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br>./ftp_client<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190021652.png"alt="image-20250528190021652" /><figcaption aria-hidden="true">image-20250528190021652</figcaption></figure><h3 id="基于web的ftp浏览器">基于Web的FTP浏览器</h3><p><a href="http://8.152.211.157/ftp/">项目demo</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 ftp_web/ftp_client_web.py<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190106619.png"alt="image-20250528190106619" /><figcaption aria-hidden="true">image-20250528190106619</figcaption></figure><ul><li>使用你的账号和密码登录</li></ul><figure><img src="../img/assets/image-20250528190129700.png"alt="image-20250528190129700" /><figcaption aria-hidden="true">image-20250528190129700</figcaption></figure><h3 id="基于socket的网页爬虫">基于Socket的网页爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> crawler<br>./crawler_https https://example.com<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190143889.png"alt="image-20250528190143889" /><figcaption aria-hidden="true">image-20250528190143889</figcaption></figure><figure><img src="../img/assets/image-20250528190150785.png"alt="image-20250528190150785" /><figcaption aria-hidden="true">image-20250528190150785</figcaption></figure><ul><li>网站及图片已下载到 download/“域名” 文件夹中。</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>本项目为计算机网络实习课程的作业。</p></li><li><p>项目包含以下部分：</p><ul><li>用C语言实现的FTP服务器</li><li>用C语言实现的FTP客户端</li><li>用Python语言实现的基于Web的FTP文件浏览器</li><li>用C语言实现的基于Socket的网页爬虫</li></ul></li><li><p>所有FTP客户端/服务器和爬虫均需在Linux操作系统下运行。</p></li></ul><p><ahref="https://github.com/larryyan/FTP-Homework">GitHub项目链接</a></p><h2 id="准备工作">准备工作</h2><h3 id="编译c语言服务器客户端和爬虫">编译C语言服务器、客户端和爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make<br></code></pre></td></tr></table></figure><h3 id="安装所需python依赖包">安装所需Python依赖包</h3><h4 id="ubuntu-debian">Ubuntu / Debian</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install python-requests<br><span class="hljs-built_in">sudo</span> apt install python-cgi<br></code></pre></td></tr></table></figure><h4 id="arch-linux">Arch Linux</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S python-requests<br><span class="hljs-built_in">sudo</span> pacman -S python-cgi<br></code></pre></td></tr></table></figure><h2 id="运行方法">运行方法</h2><h3 id="ftp服务器">FTP服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br><span class="hljs-built_in">sudo</span> ./ftp_server<br></code></pre></td></tr></table></figure><h3 id="ftp客户端">FTP客户端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> C_ftp<br>./ftp_client<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190021652.png"alt="image-20250528190021652" /><figcaption aria-hidden="true">image-20250528190021652</figcaption></figure><h3 id="基于web的ftp浏览器">基于Web的FTP浏览器</h3><p><a href="https://www.yanjz.top/ftp/">项目demo</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 ftp_web/ftp_client_web.py<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190106619.png"alt="image-20250528190106619" /><figcaption aria-hidden="true">image-20250528190106619</figcaption></figure><ul><li>使用你的账号和密码登录</li></ul><figure><img src="../img/assets/image-20250528190129700.png"alt="image-20250528190129700" /><figcaption aria-hidden="true">image-20250528190129700</figcaption></figure><h3 id="基于socket的网页爬虫">基于Socket的网页爬虫</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> crawler<br>./crawler_https https://example.com<br></code></pre></td></tr></table></figure><figure><img src="../img/assets/image-20250528190143889.png"alt="image-20250528190143889" /><figcaption aria-hidden="true">image-20250528190143889</figcaption></figure><figure><img src="../img/assets/image-20250528190150785.png"alt="image-20250528190150785" /><figcaption aria-hidden="true">image-20250528190150785</figcaption></figure><ul><li>网站及图片已下载到 download/“域名” 文件夹中。</li></ul>]]></content>
     
     
     
     <tags>
+      
+      <tag>Python</tag>
       
       <tag>计算机网络</tag>
       
@@ -78,11 +80,42 @@
       
       <tag>C语言</tag>
       
-      <tag>Python</tag>
-      
       <tag>实验</tag>
       
       <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>北京新增疫情地图</title>
+    <link href="/blog/epidemic-area/"/>
+    <url>/blog/epidemic-area/</url>
+    
+    <content type="html"><![CDATA[<ul><li>北京各区疫情发布信息繁杂，本项目数据来源当日《北京日报》信息爬取</li></ul><p><a href="https://www.yanjz.top/epidemic-area/">项目demo</a></p><h2 id="介绍">介绍</h2><ul><li>python爬虫爬取《北京日报》新闻</li><li>通过高德地图api搜索目标地址的经纬度</li><li>通过pyecharts构建地图</li></ul><h2 id="使用方式">使用方式</h2><ul><li>安装requirements.txt中的依赖</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install -r requirements.txt<br></code></pre></td></tr></table></figure><ul><li><p>创建key.txt 输入自己的高德地图key（前往<ahref="https://console.amap.com/dev/key/app">高德开放平台</a>申请）</p></li><li><p>运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">python map.py<br></code></pre></td></tr></table></figure></li><li><p>打开render.html即可查看地图</p></li></ul><figure><img src="../img/assets/image-20250616152551774.png"alt="image-20250616152551774" /><figcaption aria-hidden="true">image-20250616152551774</figcaption></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>疫情</tag>
+      
+      <tag>数据可视化</tag>
+      
+      <tag>爬虫</tag>
+      
+      <tag>地图</tag>
+      
+      <tag>北京</tag>
+      
+      <tag>pyecharts</tag>
+      
+      <tag>高德地图</tag>
       
     </tags>
     
@@ -101,11 +134,11 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>天文</tag>
       
       <tag>物理</tag>
+      
+      <tag>Python</tag>
       
       <tag>数据分析</tag>
       
