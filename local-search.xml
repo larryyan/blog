@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Unitree ROS2 在 Ubuntu 20.04 下的安装与编译</title>
+    <link href="/blog/unitree_ros2-installation-on-Ubuntu20.04/"/>
+    <url>/blog/unitree_ros2-installation-on-Ubuntu20.04/</url>
+    
+    <content type="html"><![CDATA[<h2 id="准备工作">准备工作</h2><h3 id="安装-ubuntu20.04">安装 Ubuntu20.04</h3><ul><li>虚拟机：VMware Workstation17 Pro</li><li>ISO 镜像：<ahref="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/">https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/</a></li></ul><h3 id="apt-换源">apt 换源</h3><ul><li>参考：<ahref="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/">https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/</a></li></ul><h3 id="ros2-安装">ROS2 安装</h3><ul><li><p>鱼香 ROS 一键安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget http://fishros.com/install -O fishros &amp;&amp; . fishros<br></code></pre></td></tr></table></figure></li><li><p>除了换源其他的默认推荐选项</p></li></ul><h2 id="下载编译unitree_ros2">下载、编译unitree_ros2</h2><ul><li><p>拉取源代码</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/unitreerobotics/unitree_ros2<br></code></pre></td></tr></table></figure></p></li><li><p>下载cyclonedds依赖</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install ros-foxy-rmw-cyclonedds-cpp<br><span class="hljs-built_in">sudo</span> apt install ros-foxy-rosidl-generator-dds-idl<br></code></pre></td></tr></table></figure></p></li><li><p>用编译cyclonedds需要先摆脱ros自带的dds干扰</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install gedit<br><span class="hljs-built_in">sudo</span> gedit ~/.bashrc<br></code></pre></td></tr></table></figure></p><ul><li><p>注释掉ros</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># source /opt/ros/foxy/setup.bash </span><br></code></pre></td></tr></table></figure></p></li></ul></li><li><p>下载编译dds，colcon需要管理员权限</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/unitree_ros2/cyclonedds_ws/src<br>git <span class="hljs-built_in">clone</span> https://github.com/ros2/rmw_cyclonedds -b foxy<br>git <span class="hljs-built_in">clone</span> https://github.com/eclipse-cyclonedds/cyclonedds -b releases/0.10.x <br><span class="hljs-built_in">cd</span> ..<br>su        <span class="hljs-comment">#进入管理员账号</span><br><span class="hljs-built_in">sudo</span> colcon build --packages-select cyclonedds <span class="hljs-comment">#Compile cyclone-dds package</span><br></code></pre></td></tr></table></figure></p></li><li><p>编译unitree源代码</p><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /opt/ros/foxy/setup.bash <span class="hljs-comment"># source ROS2 environment</span><br>colcon build <span class="hljs-comment"># Compile all packages in the workspace</span><br></code></pre></td></tr></table></figure></p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ROS2</tag>
+      
+      <tag>Ubuntu20.04</tag>
+      
+      <tag>机器人</tag>
+      
+      <tag>Unitree</tag>
+      
+      <tag>安装教程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>图书馆管理系统后端项目实战</title>
     <link href="/blog/library-management-system-backend/"/>
     <url>/blog/library-management-system-backend/</url>
@@ -72,13 +99,13 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>计算机网络</tag>
       
       <tag>FTP</tag>
       
       <tag>C语言</tag>
+      
+      <tag>Python</tag>
       
       <tag>实验</tag>
       
@@ -134,11 +161,11 @@
     
     <tags>
       
+      <tag>Python</tag>
+      
       <tag>天文</tag>
       
       <tag>物理</tag>
-      
-      <tag>Python</tag>
       
       <tag>数据分析</tag>
       
