@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Windows 下使用 ZeroTier 加入好友网络教程</title>
+    <link href="/blog/zerotier-usage/"/>
+    <url>/blog/zerotier-usage/</url>
+    
+    <content type="html"><![CDATA[<p>ZeroTier 是一款简单易用的虚拟局域网工具，支持多平台。本文介绍如何在Windows 系统下下载安装 ZeroTier 并加入好友的虚拟网络。</p><h2 id="下载并安装-zerotier">1. 下载并安装 ZeroTier</h2><ul><li>访问官网下载页面：<ahref="https://download.zerotier.com/dist/ZeroTier%20One.msi">ZeroTierWindows 客户端下载</a></li><li>下载完成后，双击安装包，按提示完成安装。</li></ul><figure><img src="../img/assets/image-20250729180533111.png"alt="image-20250729180533111" /><figcaption aria-hidden="true">image-20250729180533111</figcaption></figure><h2 id="启动-zerotier-客户端">2. 启动 ZeroTier 客户端</h2><ul><li>安装完成后，右下角任务栏点击“^”展开隐藏图标。</li><li>找到 ZeroTier 的图标（黄色圆圈），右键点击。 <imgsrc="../img/assets/image-20250729180645797.png"alt="image-20250729180645797" /></li></ul><figure><img src="../img/assets/image-20250729180621635.png"alt="image-20250729180621635" /><figcaption aria-hidden="true">image-20250729180621635</figcaption></figure><h2 id="加入好友网络">3. 加入好友网络</h2><ul><li>在弹出的菜单中选择 <code>Join new network...</code></li><li>输入好友提供的网络 ID（Network ID），点击“Join”。</li></ul><figure><img src="../img/assets/image-20250729180950172.png"alt="image-20250729180950172" /><figcaption aria-hidden="true">image-20250729180950172</figcaption></figure><h2 id="等待好友授权">4. 等待好友授权</h2><ul><li>加入后，需等待网络管理员（好友）在 ZeroTier控制台授权你的设备。</li><li>授权后，你的设备会获得虚拟局域网内的 IP 地址。</li></ul><figure><img src="../img/assets/image-20250729181146122.png"alt="image-20250729181146122" /><figcaption aria-hidden="true">image-20250729181146122</figcaption></figure><h2 id="验证连接">5. 验证连接</h2><ul><li>在 ZeroTier 客户端中，查看网络状态是否为“OK”。</li><li>可通过 <code>ipconfig</code> 命令查看分配到的虚拟网卡和 IP。</li><li>现在你可以与同一网络下的其他设备互通。</li></ul><hr /><p>如需退出网络，可在 ZeroTier 客户端中右键对应网络，选择“Leave”。</p><blockquote><p>本文仅为基础操作流程，更多高级用法可参考 ZeroTier 官方文档。</p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ZeroTier</tag>
+      
+      <tag>Windows</tag>
+      
+      <tag>内网穿透</tag>
+      
+      <tag>网络</tag>
+      
+      <tag>教程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Unitree ROS2 在 Ubuntu 20.04 下的安装与编译</title>
     <link href="/blog/unitree_ros2-installation-on-Ubuntu20.04/"/>
     <url>/blog/unitree_ros2-installation-on-Ubuntu20.04/</url>
