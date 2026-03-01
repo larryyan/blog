@@ -35,6 +35,33 @@
   
   
   <entry>
+    <title>51单片机流式混合运算计算器</title>
+    <link href="/blog/c51-stream-calculator/"/>
+    <url>/blog/c51-stream-calculator/</url>
+    
+    <content type="html"><![CDATA[<p>本项目是一个基于 STC89C516 的流式混合运算计算器，在资源受限的 51单片机上实现了带括号的浮点数四则运算。核心算法借鉴编译原理，使用流式有限状态机进行词法分析，并用算符优先分析完成语法归约，解决了负号二义性与运算优先级问题。</p><p><ahref="https://github.com/larryyan/c51-stream-calculator">GitHub项目链接</a></p><h2 id="项目特性">项目特性</h2><ul><li>支持浮点数四则混合运算与括号</li><li>负号与减号歧义消解，输入更稳定</li><li>矩阵键盘 + 独立按键输入，LCD1602 显示</li><li>蜂鸣器按键反馈与彩蛋功能</li><li>模块化架构，算法层与驱动层分离</li></ul><h2 id="硬件与开发环境">硬件与开发环境</h2><h3 id="硬件配置">硬件配置</h3><ul><li>开发板：普中51-单核-A5</li><li>主控：STC89C516（兼容 STC89C52/54/58 系列）</li><li>显示：LCD1602</li><li>输入：矩阵按键（P1 口）与独立按键（P3 口）</li><li>蜂鸣器：无源蜂鸣器（P2.4）</li></ul><h3 id="软件环境">软件环境</h3><ul><li>编辑器：VSCode</li><li>编译工具：Keil uVision 5（C51）</li><li>烧录工具：AiCube-ISP</li></ul><h2 id="编译与运行">编译与运行</h2><h3 id="打开工程">1. 打开工程</h3><p>在 Keil uVision 5 中打开项目根目录的<code>MyCalculator.uvproj</code>。</p><h3 id="编译生成固件">2. 编译生成固件</h3><p>点击 Rebuild（或按 <code>F7</code>），确认输出<code>0 Error(s), 0 Warning(s)</code>，生成<code>Objects/MyCalculator.hex</code>。</p><h3 id="烧录到开发板">3. 烧录到开发板</h3><p>在 AiCube-ISP 中选择芯片型号 <code>STC89C516</code>，加载<code>Objects/MyCalculator.hex</code>，选择正确串口并下载。</p><h2 id="目录结构">目录结构</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs text">├── Docs/                 # 架构与算法图解<br>├── Drivers/              # 硬件驱动层<br>│   ├── LCD1602.c/h<br>│   ├── MatrixKey.c/h<br>│   ├── IndependentKey.c/h<br>│   └── Buzzer.c/h<br>├── Middleware/           # 核心算法层<br>│   ├── Lexer.c/h<br>│   ├── Parser.c/h<br>│   └── Double2Str.c/h<br>├── main.c                # 主控逻辑<br>├── MyCalculator.uvproj   # Keil 工程文件<br>└── ...<br></code></pre></td></tr></table></figure><h2 id="核心算法说明">核心算法说明</h2><ul><li>词法分析：流式有限状态机（FSM）实时解析按键流，识别数字、小数点与负号逻辑。</li><li>语法分析：算符优先分析（双栈）完成括号与运算优先级处理。</li><li>显示优化：针对 LCD1602 的浮点转字符串算法，自动去除尾零。</li></ul><h2 id="许可证">许可证</h2><p>本项目采用 MIT License 开源，详见 LICENSE 文件。</p><hr /><p>如有问题或建议，欢迎在评论区留言交流！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>项目实战</tag>
+      
+      <tag>C51</tag>
+      
+      <tag>单片机</tag>
+      
+      <tag>嵌入式</tag>
+      
+      <tag>计算器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows 下使用 ZeroTier 加入好友网络教程</title>
     <link href="/blog/zerotier-usage/"/>
     <url>/blog/zerotier-usage/</url>
